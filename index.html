@@ -2,6 +2,26 @@
 <html lang="en">
 <head>
 
+  <!-- Event snippet for Tayangan halaman conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17908570867/xdq6CIKSq-8bEPO1vNtC',
+      'value': 1.0,
+      'currency': 'IDR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
 <meta name="google-adsense-account" content="ca-pub-4361536369631803">
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4361536369631803"
